@@ -1,0 +1,119 @@
+:root {
+  --main-bg: #e6e9ef;
+  --primary-color: #6b8cce;
+  --secondary-color: #7d93b2;
+  --text-color: #2d3748;
+  --light-shadow: rgba(255, 255, 255, 0.8);
+  --dark-shadow: rgba(163, 177, 198, 0.5);
+  --border-radius: 15px;
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+.neumorphic-card {
+  background: var(--main-bg);
+  border-radius: var(--border-radius);
+  box-shadow:
+    8px 8px 16px var(--dark-shadow),
+    -8px -8px 16px var(--light-shadow);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.neumorphic-card:hover {
+  box-shadow:
+    10px 10px 20px var(--dark-shadow),
+    -10px -10px 20px var(--light-shadow);
+}
+
+.neumorphic-inset {
+  background: var(--main-bg);
+  border-radius: var(--border-radius);
+  box-shadow:
+    inset 5px 5px 10px var(--dark-shadow),
+    inset -5px -5px 10px var(--light-shadow);
+  padding: 20px;
+}
+
+.neumorphic-button {
+  background: var(--main-bg);
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow:
+    5px 5px 10px var(--dark-shadow),
+    -5px -5px 10px var(--light-shadow);
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.2s ease;
+}
+
+.neumorphic-button:hover {
+  box-shadow:
+    3px 3px 6px var(--dark-shadow),
+    -3px -3px 6px var(--light-shadow);
+}
+
+.neumorphic-button:active {
+  box-shadow:
+    inset 3px 3px 6px var(--dark-shadow),
+    inset -3px -3px 6px var(--light-shadow);
+}
+
+.nav-active {
+  box-shadow:
+    inset 3px 3px 6px var(--dark-shadow),
+    inset -3px -3px 6px var(--light-shadow);
+  color: var(--primary-color);
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 60px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem 0.5rem;
+  }
+  
+  .neumorphic-card {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+}

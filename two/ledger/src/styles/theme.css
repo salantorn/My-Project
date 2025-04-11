@@ -1,0 +1,11 @@
+.neumorphism {
+    background: #e0e0e0;
+    border-radius: 1rem;
+    box-shadow: 9px 9px 16px #bebebe, -9px -9px 16px #ffffff;
+    padding: 1rem;
+  }
+  
+  .dark .neumorphism {
+    background: #2e2e2e;
+    box-shadow: 9px 9px 16px #1e1e1e, -9px -9px 16px #3e3e3e;
+  }
