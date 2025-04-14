@@ -16,7 +16,7 @@
 ### 🛠️ Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,typescript,express,docker,,flutter,vite,git,github,vscode" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,sass,bootstrap,flutter,typescript,express,mongodb,mysql,docker,vite,git,github,vscode" />
 </p>
 
 ---
@@ -33,7 +33,7 @@
 ### 🤝 Connect With Me
 
 <p align="center">
-  <a href="https://linkedin.com/in/Salantorn Ketpru" target="_blank">
+  <a href="https://linkedin.com/in/salantorn" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
   <a href="mailto:salantornlol@gmail.com" target="_blank">
