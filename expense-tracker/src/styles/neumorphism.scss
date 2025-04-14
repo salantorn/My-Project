@@ -1,0 +1,59 @@
+// src/styles/neumorphism.scss
+@mixin neumorphism-box {
+    background-color: var(--primary-bg);
+    box-shadow: 6px 6px 12px var(--shadow-dark), 
+               -6px -6px 12px var(--shadow-light);
+  }
+  
+  @mixin neumorphism-box-inset {
+    background-color: var(--primary-bg);
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), 
+                inset -4px -4px 8px var(--shadow-light);
+  }
+  
+  @mixin neumorphism-button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    border: none;
+    box-shadow: 4px 4px 8px var(--shadow-dark), 
+               -4px -4px 8px var(--shadow-light);
+    transition: all 0.2s ease;
+    
+    &:hover {
+      box-shadow: 3px 3px 6px var(--shadow-dark), 
+                 -3px -3px 6px var(--shadow-light);
+    }
+    
+    &:active, &.active {
+      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+                  inset -3px -3px 6px var(--shadow-light);
+    }
+  }
+  
+  .neumorph-box {
+    @include neumorphism-box;
+  }
+  
+  .neumorph-box-inset {
+    @include neumorphism-box-inset;
+  }
+  
+  .neumorph-button {
+    @include neumorphism-button;
+  }
+  
+  .form-control, .form-select {
+    background-color: var(--primary-bg);
+    border: none;
+    color: var(--primary-text);
+    @include neumorphism-box-inset;
+    
+    &:focus {
+      background-color: var(--primary-bg);
+      color: var(--primary-text);
+      box-shadow: inset 4px 4px 8px var(--shadow-dark), 
+                  inset -4px -4px 8px var(--shadow-light);
+    }
+  }

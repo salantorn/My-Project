@@ -1,0 +1,63 @@
+// src/App.scss
+@import '~bootstrap/scss/bootstrap';
+@import './styles/neumorphism.scss';
+@import './styles/darkmode.scss';
+
+:root {
+  --primary-bg: #e6e7ee;
+  --primary-text: #44476a;
+  --shadow-light: #ffffff;
+  --shadow-dark: #b8b9be;
+  --accent-blue: #5e72e4;
+  --accent-pink: #f5365c;
+  --accent-teal: #11cdef;
+  --accent-green: #2dce89;
+  
+  --chart-income: var(--accent-blue);
+  --chart-expense: var(--accent-pink);
+  --chart-budget: var(--accent-teal);
+  --chart-savings: var(--accent-green);
+}
+
+.dark-mode {
+  --primary-bg: #1a1f36;
+  --primary-text: #d8d8d8;
+  --shadow-light: #252b43;
+  --shadow-dark: #141824;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content-container {
+  padding: 20px 0;
+}
+
+.chart-container {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  @include neumorphism-box;
+}
+
+.chart-title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--primary-text);
+}
+
+.chart-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}

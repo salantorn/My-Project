@@ -1,0 +1,53 @@
+// src/styles/darkmode.scss
+.dark-mode {
+    .neumorph-box {
+      box-shadow: 5px 5px 10px var(--shadow-dark), 
+                 -5px -5px 10px var(--shadow-light);
+    }
+    
+    .neumorph-box-inset {
+      box-shadow: inset 4px 4px 8px var(--shadow-dark), 
+                  inset -4px -4px 8px var(--shadow-light);
+    }
+    
+    .neumorph-button {
+      box-shadow: 4px 4px 8px var(--shadow-dark), 
+                 -4px -4px 8px var(--shadow-light);
+      
+      &:hover {
+        box-shadow: 3px 3px 6px var(--shadow-dark), 
+                   -3px -3px 6px var(--shadow-light);
+      }
+      
+      &:active, &.active {
+        box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+                    inset -3px -3px 6px var(--shadow-light);
+      }
+    }
+  }
+  
+  .dark-mode-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: var(--primary-bg);
+    border-radius: 15px;
+    @include neumorphism-box-inset;
+    cursor: pointer;
+    
+    .toggle-thumb {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: var(--primary-bg);
+      @include neumorphism-box;
+      transition: transform 0.3s ease;
+    }
+    
+    &.active .toggle-thumb {
+      transform: translateX(30px);
+    }
+  }
